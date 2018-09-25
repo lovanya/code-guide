@@ -87,27 +87,27 @@ ESlint 和 Prettier 我们都选择在项目中安装，这样不管能避免其
 ## 开发工具
 
 我们选择 [Visual Studio Code](https://code.visualstudio.com/) 作为前端开发的工具。
-搜索插件  Eslint、vuter、prettier-code安装，在编辑器首选项配置中修改配置
+`Ctrl + Shift + P` 分别搜索插件  ESLint、Vetur、Prettier - Code formatter、EditorConfig for VS Code 安装，在编辑器首选项配置中修改配置
 
 ```json
-    "vetur.format.defaultFormatter.html": "prettier", 
-    "eslint.autoFixOnSave": true,  //保存时使用自动格式化
-    "eslint.validate": [   //验证文件类型
-      "javascript",
-      "javascriptreact",
-      "vue",
-      "html",
-      "jsx",
-      {
-        "language": "html",
-        "autoFix": true
-      },
-      {
-        "language": "vue",
-        "autoFix": true
-      }
-    ],
-    "editor.formatOnSave": true,  //保存时自动格式化
+"vetur.format.defaultFormatter.html": "prettier", 
+"eslint.autoFixOnSave": true,  //保存时使用自动格式化
+"eslint.validate": [   //验证文件类型
+  "javascript",
+  "javascriptreact",
+  "vue",
+  "html",
+  "jsx",
+  {
+    "language": "html",
+    "autoFix": true
+  },
+  {
+    "language": "vue",
+    "autoFix": true
+  }
+],
+"editor.formatOnSave": true,  //保存时自动格式化
 ```
 WebStorm 可以参考这篇[博客](https://www.godblessyuan.com/2018/04/%E6%A2%B3%E7%90%86%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8eslint%E5%92%8Cprettier%E6%9D%A5%E6%A3%80%E6%9F%A5%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81%E9%97%AE%E9%A2%98.html)进行配置
 
