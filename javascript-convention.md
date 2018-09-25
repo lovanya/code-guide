@@ -2,17 +2,17 @@
 
 ## 缩进
 
-使用soft tab（4个空格）。
+使用space（2个空格）。
 
 ```javascript
-    var x = 1,
-        y = 1;
+var x = 1,
+  y = 1;
 
-    if (x < y) {
-        x += 10;
-    } else {
-        x += 1;
-    }
+if (x < y) {
+  x += 10;
+} else {
+  x += 1;
+}
 ```
 
 ## 单行长度
@@ -32,16 +32,16 @@
 - do-while
 
 ```javascript
-    /* var declaration */
-    var x = 1;
+/* var declaration */
+var x = 1;
 
-    /* expression statement */
-    x++;
+/* expression statement */
+x++;
 
-    /* do-while */
-    do {
-        x++;
-    } while (x < 10);
+/* do-while */
+do {
+  x++;
+} while (x < 10);
 ```
 
 ## 空格
@@ -71,55 +71,55 @@
 - 函数的参数之间
 
 ```javascript
-    // not good
-    var a = {
-        b :1
-    };
+// not good
+var a = {
+  b :1
+};
 
-    // good
-    var a = {
-        b: 1
-    };
+// good
+var a = {
+  b: 1
+};
 
-    // not good
-    ++ x;
-    y ++;
-    z = x?1:2;
+// not good
+++ x;
+y ++;
+z = x?1:2;
 
-    // good
-    ++x;
-    y++;
-    z = x ? 1 : 2;
+// good
+++x;
+y++;
+z = x ? 1 : 2;
 
-    // not good
-    var a = [ 1, 2 ];
+// not good
+var a = [ 1, 2 ];
 
-    // good
-    var a = [1, 2];
+// good
+var a = [1, 2];
 
-    // not good
-    var a = ( 1+2 )*3;
+// not good
+var a = ( 1+2 )*3;
 
-    // good
-    var a = (1 + 2) * 3;
+// good
+var a = (1 + 2) * 3;
 
-    // no space before '(', one space before '{', one space between function parameters
-    var doSomething = function(a, b, c) {
-        // do something
-    };
+// no space before '(', one space before '{', one space between function parameters
+var doSomething = function(a, b, c) {
+  // do something
+};
 
-    // no space before '('
-    doSomething(item);
+// no space before '('
+doSomething(item);
 
-    // not good
-    for(i=0;i<6;i++){
-        x++;
-    }
+// not good
+for(i=0;i<6;i++){
+  x++;
+}
 
-    // good
-    for (i = 0; i < 6; i++) {
-        x++;
-    }
+// good
+for (i = 0; i < 6; i++) {
+  x++;
+}
 ```
 
 ## 空行
@@ -132,68 +132,68 @@
 - 文件最后保留一个空行
 
 ```javascript
-    // need blank line after variable declaration
-    var x = 1;
+   
+// need blank line after variable declaration
+var x = 1;
 
-    // not need blank line when variable declaration is last expression in the current block
-    if (x >= 1) {
-        var y = x + 1;
-    }
+// not need blank line when variable declaration is last expression in the current block
+if (x >= 1) {
+  var y = x + 1;
+}
 
-    var a = 2;
+var a = 2;
 
-    // need blank line before line comment
+// need blank line before line comment
+a++;
+
+function b() {
+  // not need blank line when comment is first line of block
+  return a;
+}
+
+// need blank line after blocks
+for (var i = 0; i < 2; i++) {
+  if (true) {
+    return false;
+  }
+
+  continue;
+}
+
+var obj = {
+  foo: function() {
+    return 1;
+  },
+
+  bar: function() {
+    return 2;
+  }
+};
+
+// not need blank line when in argument list, array, object
+func(
+  2,
+  function() {
     a++;
+  },
+  3
+);
 
-    function b() {
-        // not need blank line when comment is first line of block
-        return a;
-    }
+var foo = [
+  2,
+  function() {
+    a++;
+  },
+  3
+];
 
-    // need blank line after blocks
-    for (var i = 0; i < 2; i++) {
-        if (true) {
-            return false;
-        }
-
-        continue;
-    }
-
-    var obj = {
-        foo: function() {
-            return 1;
-        },
-
-        bar: function() {
-            return 2;
-        }
-    };
-
-    // not need blank line when in argument list, array, object
-    func(
-        2,
-        function() {
-            a++;
-        },
-        3
-    );
-
-    var foo = [
-        2,
-        function() {
-            a++;
-        },
-        3
-    ];
-
-
-    var foo = {
-        a: 2,
-        b: function() {
-            a++;
-        },
-        c: 3
-    };
+var foo = {
+  a: 2,
+  b: function() {
+    a++;
+  },
+  c: 3
+};
 ```
 
 ## 换行
@@ -211,63 +211,63 @@
 - 变量赋值后
 
 ```javascript
-    // not good
-    var a = {
-        b: 1
-        , c: 2
-    };
+// not good
+var a = {
+  b: 1
+  , c: 2
+};
 
-    x = y
-        ? 1 : 2;
+x = y
+  ? 1 : 2;
 
-    // good
-    var a = {
-        b: 1,
-        c: 2
-    };
+// good
+var a = {
+  b: 1,
+  c: 2
+};
 
-    x = y ? 1 : 2;
-    x = y ?
-        1 : 2;
+x = y ? 1 : 2;
+x = y ?
+  1 : 2;
 
-    x = y ?
-        1 :
-        (z ? 2 : 3);
+x = y ?
+  1 :
+  (z ? 2 : 3);
 
-    // no need line break with 'else', 'catch', 'finally'
-    if (condition) {
-        ...
-    } else {
-        ...
-    }
+// no need line break with 'else', 'catch', 'finally'
+if (condition) {
+  ...
+} else {
+  ...
+}
 
-    try {
-        ...
-    } catch (e) {
-        ...
-    } finally {
-        ...
-    }
+try {
+  ...
+} catch (e) {
+  ...
+} finally {
+  ...
+}
 
-    // not good
-    function test()
-    {
-        ...
-    }
+// not good
+function test()
+{
+  ...
+}
 
-    // good
-    function test() {
-        ...
-    }
+// good
+function test() {
+  ...
+}
 
-    // not good
-    var a, foo = 7, b,
-        c, bar = 8;
+// not good
+var a, foo = 7, b,
+  c, bar = 8;
 
-    // good
-    var a,
-        foo = 7,
-        b, c, bar = 8;
+// good
+var a,
+  foo = 7,
+  b, c, bar = 8;
 ```
 
 ## 单行注释
@@ -279,12 +279,12 @@
 可位于一个代码行的末尾，与代码间隔一个空格。
 
 ```javascript
-    if (condition) {
-        // if you made it here, then all security checks passed
-        allowed();
-    }
+if (condition) {
+  // if you made it here, then all security checks passed
+  allowed();
+}
 
-    var zhangsan = 'zhangsan'; // one space after code
+var zhangsan = 'zhangsan'; // one space after code
 ```
 
 ## 多行注释
@@ -313,12 +313,12 @@
 最外层统一使用单引号。
 
 ```javascript
-    // not good
-    var x = "test";
+// not good
+var x = "test";
 
-    // good
-    var y = 'foo',
-        z = '<div id="test"></div>';
+// good
+var y = 'foo',
+  z = '<div id="test"></div>';
 ```
 
 ## 变量命名
@@ -333,27 +333,27 @@
 - jquery对象必须以'$'开头命名
 
 ```javascript
-    var thisIsMyName;
+var thisIsMyName;
 
-    var goodID;
+var goodID;
 
-    var reportURL;
+var reportURL;
 
-    var AndroidVersion;
+var AndroidVersion;
 
-    var iOSVersion;
+var iOSVersion;
 
-    var MAX_COUNT = 10;
+var MAX_COUNT = 10;
 
-    function Person(name) {
-        this.name = name;
-    }
+function Person(name) {
+  this.name = name;
+}
 
-    // not good
-    var body = $('body');
+// not good
+var body = $('body');
 
-    // good
-    var $body = $('body');
+// good
+var $body = $('body');
 ```
 
 ## 变量声明
@@ -361,17 +361,17 @@
 一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
 
 ```javascript
-    function doSomethingWithItems(items) {
-        // use one var
-        var value = 10,
-            result = value + 10,
-            i,
-            len;
+  function doSomethingWithItems(items) {
+    // use one var
+    var value = 10,
+      result = value + 10,
+      i,
+      len;
 
-        for (i = 0, len = items.length; i < len; i++) {
-            result += 10;
-        }
+    for (i = 0, len = items.length; i < len; i++) {
+      result += 10;
     }
+  }
 ```
 
 ## 函数
@@ -387,50 +387,50 @@
 参数之间用', '分隔，注意逗号后有一个空格。
 
 ```javascript
-    // no space before '(', but one space before'{'
-    var doSomething = function(item) {
-        // do something
-    };
+// no space before '(', but one space before'{'
+var doSomething = function(item) {
+  // do something
+};
 
-    function doSomething(item) {
-        // do something
-    }
+function doSomething(item) {
+  // do something
+}
 
-    // not good
-    doSomething (item);
+// not good
+doSomething (item);
 
-    // good
-    doSomething(item);
+// good
+doSomething(item);
 
-    // requires parentheses around immediately invoked function expressions
-    (function() {
-        return 1;
-    })();
+// requires parentheses around immediately invoked function expressions
+(function() {
+  return 1;
+})();
 
-    // not good
-    [1, 2].forEach(function x() {
-        ...
-    });
+// not good
+[1, 2].forEach(function x() {
+  ...
+});
 
-    // good
-    [1, 2].forEach(function() {
-        ...
-    });
+// good
+[1, 2].forEach(function() {
+  ...
+});
 
-    // not good
-    var a = [1, 2, function a() {
-        ...
-    }];
+// not good
+var a = [1, 2, function a() {
+  ...
+}];
 
-    // good
-    var a = [1, 2, function() {
-        ...
-    }];
+// good
+var a = [1, 2, function() {
+  ...
+}];
 
-    // use ', ' between function parameters
-    var doSomething = function(a, b, c) {
-        // do something
-    };
+// use ', ' between function parameters
+var doSomething = function(a, b, c) {
+  // do something
+};
 ```
 
 ## 数组、对象
@@ -442,23 +442,23 @@
 数组、对象最后不要有逗号。
 
 ```javascript
-    // not good
-    var a = {
-        'b': 1
-    };
+// not good
+var a = {
+  'b': 1
+};
 
-    var a = {b: 1};
+var a = {b: 1};
 
-    var a = {
-        b: 1,
-        c: 2,
-    };
+var a = {
+  b: 1,
+  c: 2,
+};
 
-    // good
-    var a = {
-        b: 1,
-        c: 2
-    };
+// good
+var a = {
+  b: 1,
+  c: 2
+};
 ```
 
 ## 括号
@@ -466,14 +466,14 @@
 下列关键字后必须有大括号（即使代码块的内容只有一行）：`if, else, for, while, do, switch, try, catch, finally, with`。
 
 ```javascript
-    // not good
-    if (condition)
-        doSomething();
+// not good
+if (condition)
+  doSomething();
 
-    // good
-    if (condition) {
-        doSomething();
-    }
+// good
+if (condition) {
+  doSomething();
+}
 ```
 
 ## null
@@ -491,26 +491,26 @@
 - 不要与未初始化的变量做比较
 
 ```javascript
-    // not good
-    function test(a, b) {
-        if (b === null) {
-            // not mean b is not supply
-            ...
-        }
-    }
+// not good
+function test(a, b) {
+  if (b === null) {
+    // not mean b is not supply
+    ...
+  }
+}
 
-    var a;
+var a;
 
-    if (a === null) {
-        ...
-    }
+if (a === null) {
+  ...
+}
 
-    // good
-    var a = null;
+// good
+var a = null;
 
-    if (a === null) {
-        ...
-    }
+if (a === null) {
+  ...
+}
 ```
 
 ## undefined
@@ -520,15 +520,15 @@
 使用 typeof 和字符串 'undefined' 对变量进行判断。
 
 ```javascript
-    // not good
-    if (person === undefined) {
-        ...
-    }
+// not good
+if (person === undefined) {
+  ...
+}
 
-    // good
-    if (typeof person === 'undefined') {
-        ...
-    }
+// good
+if (typeof person === 'undefined') {
+  ...
+}
 ```
 
 ## jshint
@@ -564,90 +564,90 @@ debugger不要出现在提交的代码里；
 不要像这样使用构造函数，例：new function () { ... }, new Object；
 
 ```javascript
-    // not good
-    if (a == 1) {
-        a++;
-    }
+// not good
+if (a == 1) {
+  a++;
+}
 
-    // good
-    if (a === 1) {
-        a++;
-    }
+// good
+if (a === 1) {
+  a++;
+}
 
-    // good
-    for (key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            // be sure that obj[key] belongs to the object and was not inherited
-            console.log(obj[key]);
-        }
-    }
+// good
+for (key in obj) {
+  if (obj.hasOwnProperty(key)) {
+    // be sure that obj[key] belongs to the object and was not inherited
+    console.log(obj[key]);
+  }
+}
 
-    // not good
-    Array.prototype.count = function(value) {
-        return 4;
+// not good
+Array.prototype.count = function(value) {
+  return 4;
+};
+
+// not good
+var x = 1;
+
+function test() {
+  if (true) {
+    var x = 0;
+  }
+
+  x += 1;
+}
+
+// not good
+function test() {
+  console.log(x);
+
+  var x = 1;
+}
+
+// not good
+new Person();
+
+// good
+var person = new Person();
+
+// not good
+delete(obj.attr);
+
+// good
+delete obj.attr;
+
+// not good
+if (a = 10) {
+  a++;
+}
+
+// not good
+var a = [1, , , 2, 3];
+
+// not good
+var nums = [];
+
+for (var i = 0; i < 10; i++) {
+  (function(i) {
+    nums[i] = function(j) {
+      return i + j;
     };
+  }(i));
+}
 
-    // not good
-    var x = 1;
+// not good
+var singleton = new function() {
+  var privateVar;
 
-    function test() {
-        if (true) {
-            var x = 0;
-        }
+  this.publicMethod = function() {
+    privateVar = 1;
+  };
 
-        x += 1;
-    }
-
-    // not good
-    function test() {
-        console.log(x);
-
-        var x = 1;
-    }
-
-    // not good
-    new Person();
-
-    // good
-    var person = new Person();
-
-    // not good
-    delete(obj.attr);
-
-    // good
-    delete obj.attr;
-
-    // not good
-    if (a = 10) {
-        a++;
-    }
-
-    // not good
-    var a = [1, , , 2, 3];
-
-    // not good
-    var nums = [];
-
-    for (var i = 0; i < 10; i++) {
-        (function(i) {
-            nums[i] = function(j) {
-                return i + j;
-            };
-        }(i));
-    }
-
-    // not good
-    var singleton = new function() {
-        var privateVar;
-
-        this.publicMethod = function() {
-            privateVar = 1;
-        };
-
-        this.publicMethod2 = function() {
-            privateVar = 2;
-        };
-    };
+  this.publicMethod2 = function() {
+    privateVar = 2;
+  };
+};
 ```
 ## 杂项
 
@@ -666,40 +666,40 @@ switch的falling through和no default的情况一定要有注释特别说明；
 不允许有空的代码块。
 
 ```javascript
+  // not good
+  var a   = 1;
+
+  function Person() {
     // not good
-    var a   = 1;
-
-    function Person() {
-        // not good
-        var me = this;
-
-        // good
-        var _this = this;
-
-        // good
-        var that = this;
-
-        // good
-        var self = this;
-    }
+    var me = this;
 
     // good
-    switch (condition) {
-        case 1:
-        case 2:
-            ...
-            break;
-        case 3:
-            ...
-        // why fall through
-        case 4
-            ...
-            break;
-        // why no default
-    }
+    var _this = this;
 
-    // not good with empty block
-    if (condition) {
+    // good
+    var that = this;
 
-    }
+    // good
+    var self = this;
+  }
+
+  // good
+  switch (condition) {
+    case 1:
+    case 2:
+        ...
+        break;
+    case 3:
+        ...
+    // why fall through
+    case 4
+        ...
+        break;
+    // why no default
+  }
+
+  // not good with empty block
+  if (condition) {
+
+  }
 ```

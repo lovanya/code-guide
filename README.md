@@ -1,7 +1,3 @@
-本规范是从腾讯 Alloy Team 的团队规范中拿过来，修改一小部分的 markdown 版本。
-
-特性：
-- 新增了部分 Vuejs 的规范。
-  
-在此感谢@AlloyTeamd的贡献。
-来源：[github 仓库](https://github.com/AlloyTeam/CodeGuide)，[文档](http://alloyteam.github.io/CodeGuide/)
+本规范包含了 JavaScript、CSS、HTML 和 Vue.js 的规范，还有开发工具 VSCode 的配置。
+其中 Javascript、CSS 和 HTML 的配置来自于[腾讯 Aolly Team 团队前端规范](http://alloyteam.github.io/CodeGuide/)，在此感谢 @AlloyTeam 的贡献。
+Vue.js的规范来自于[Vue.js 组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide)中文版本，该指南为 [De Voorhoede](https://github.com/voorhoede) 参考 [RiotJS 编码规范](https://github.com/voorhoede/riotjs-style-guide) 而写，中文版本的译者为[杨小福](https://github.com/xiaofuzi)、[机智的马里奥](https://github.com/wysxhlyy)、[根号三](https://github.com/sqrthree)。
