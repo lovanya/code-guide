@@ -16,8 +16,8 @@
     <title>Page title</title>
   </head>
   <body>
-      <img src="images/company_logo.png" alt="Company">
-      <h1 class="hello-world">Hello, world!</h1>
+    <img src="images/company_logo.png" alt="Company">
+    <h1 class="hello-world">Hello, world!</h1>
   </body>
 </html>
 ```
@@ -30,7 +30,7 @@
 ```html
 <!DOCTYPE html>
 <html>
-    ...
+  ...
 </html>
 ```
 
@@ -47,7 +47,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en-us">
-    ...
+  ...
 </html>
 ```
 
@@ -59,7 +59,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8">
+    <meta charset="UTF-8">
   </head>
   ...
 </html>
@@ -75,7 +75,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   </head>
   ...
 </html>
@@ -97,7 +97,7 @@ HTML5 规范链接
 
 <!-- In-document CSS -->
 <style>
-    ...
+  ...
 </style>
 
 <!-- External JS -->
@@ -105,7 +105,7 @@ HTML5 规范链接
 
 <!-- In-document JS -->
 <script>
-    ...
+  ...
 </script>
 ```
 
