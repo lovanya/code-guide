@@ -717,14 +717,14 @@ switch的falling through和no default的情况一定要有注释特别说明；
   switch (condition) {
     case 1:
     case 2:
-        ...
-        break;
+      ...
+      break;
     case 3:
-        ...
+      ...
     // why fall through
     case 4
-        ...
-        break;
+      ...
+      break;
     // why no default
   }
 
