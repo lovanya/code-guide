@@ -9,6 +9,14 @@
     Node.js 自带的包管理工具为 npm，但是我们推荐使用 [Yarn](https://yarn.bootcss.com/)，相比于 npm 它有许多优点。
     但是要注意其 Node 版本支持: ^4.8.0 || ^5.7.0 || ^6.2.2 || >=8.0.0。
 
+    由于国外很多站点访问较慢，可以是国内的淘宝镜像。
+    ``` bash
+    yarn config set registry https://registry.npm.taobao.org
+    # or
+    npm config set registry https://registry.npm.taobao.org
+    ```
+    
+
 2. [ESLint](https://eslint.org/) 检查代码中的错误  
    
     如果你仅仅想让 ESLint 成为你项目构建系统的一部分，我们可以在项目根目录进行本地安装：
