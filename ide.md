@@ -42,15 +42,16 @@
         'prettier/prettier': 'error', // 开启 prettier 检查
         'generator-star-spacing': 'off', // 生成器函数*的前后空格
         'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }],
-        'no-undef': 'off',
-        semi: ['error', 'always'],
-        'no-extra-semi': 'error', // 这个地方需要跟 prettier 的规则保持一致
+        'no-undef': 'error', // 禁止使用未定义的变量
+        semi: ['error', 'always'], // 在结尾使用分号
+        'no-extra-semi': 'error', // 不在尾部追加额外的分号，这个地方需要跟 prettier 的规则保持一致
         'space-before-function-paren': [
+          // 函数的“(”前是否需要添加空格
           'error',
           {
-            anonymous: 'never',
-            named: 'never',
-            asyncArrow: 'always'
+            anonymous: 'never', // 匿名函数不需要
+            named: 'never', // 有名函数不需要
+            asyncArrow: 'always' // 箭头函数需要
           }
         ],
         'no-dupe-keys': 2, // 在创建对象字面量时不允许键重复 {a:1,a:1}
@@ -59,7 +60,7 @@
         'no-debugger': 'error', // 禁止调用 debugger
         'no-implied-eval': 'error', // 在setTimeout(), setInterval() or execScript()中消除隐式eval的使用，如 setTimeout('alert("Hi!")', 100);
         'no-eval': 'error', // 禁止调用 eval 函数
-        'no-empty': 'error',
+        'no-empty': 'error', // 不允许出现空的代码块
         'no-unreachable': 2, // 禁止有执行不到的代码
         'nonblock-statement-body-position': ['error', 'below'], // 条件控制语句，执行部分必须另起一行
         curly: 'error', // if while 等条件控制语句后面必须有大括号
