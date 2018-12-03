@@ -9,6 +9,14 @@
     Node.js 自带的包管理工具为 npm，但是我们推荐使用 [Yarn](https://yarn.bootcss.com/)，相比于 npm 它有许多优点。
     但是要注意其 Node 版本支持: ^4.8.0 || ^5.7.0 || ^6.2.2 || >=8.0.0。
 
+    由于国外很多站点访问较慢，可以是国内的淘宝镜像。
+    ``` bash
+    yarn config set registry https://registry.npm.taobao.org
+    # or
+    npm config set registry https://registry.npm.taobao.org
+    ```
+    
+
 2. [ESLint](https://eslint.org/) 检查代码中的错误  
    
     如果你仅仅想让 ESLint 成为你项目构建系统的一部分，我们可以在项目根目录进行本地安装：
@@ -24,21 +32,60 @@
     ```  
     .eslintrc.js:
     ```javascript
+    // http://eslint.org/docs/user-guide/configuring
     module.exports = {
       root: true,
       extends: ['plugin:prettier/recommended', 'plugin:vue/essential', '@vue/standard'],
+      // required to lint *.vue files 使用 html参数
+      plugins: ['prettier'],
       rules: {
-        'prettier/prettier': 'error',
-        // allow async-await
-        'generator-star-spacing': 'off',
-        // allow debugger during development
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+        'prettier/prettier': 'error', // 开启 prettier 检查
+        'generator-star-spacing': 'off', // 生成器函数*的前后空格
         'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }],
         'no-undef': 'off',
-        semi: ['error', 'always'], // 这个地方需要跟 prettier 的规则保持一致
-        'no-extra-semi': 'error' //去掉额外的分号
+        semi: ['error', 'always'],
+        'no-extra-semi': 'error', // 这个地方需要跟 prettier 的规则保持一致
+        'space-before-function-paren': [
+          'error',
+          {
+            anonymous: 'never',
+            named: 'never',
+            asyncArrow: 'always'
+          }
+        ],
+        'no-dupe-keys': 2, // 在创建对象字面量时不允许键重复 {a:1,a:1}
+        'no-console': 'error', // 禁止直接调用 console 系列函数
+        'no-alert': 'error', // 禁止调用 alert 函数
+        'no-debugger': 'error', // 禁止调用 debugger
+        'no-implied-eval': 'error', // 在setTimeout(), setInterval() or execScript()中消除隐式eval的使用，如 setTimeout('alert("Hi!")', 100);
+        'no-eval': 'error', // 禁止调用 eval 函数
+        'no-empty': 'error',
+        'no-unreachable': 2, // 禁止有执行不到的代码
+        'nonblock-statement-body-position': ['error', 'below'], // 条件控制语句，执行部分必须另起一行
+        curly: 'error', // if while 等条件控制语句后面必须有大括号
+        'no-labels': [2, { allowLoop: false, allowSwitch: false }], // 禁止使用label语句，以避免无限循环
+        'no-else-return': 2, // 如果if语句里面有return,后面不能跟else语句
+        'no-extra-parens': 2, // 禁止非必要的括号
+        radix: 2, // parseInt必须指定第二个参数
+        'no-restricted-syntax': [
+          // 自定义规则，不允许直接调用 setTimeout， setInterval， execScript
+          'error',
+          {
+            selector: "CallExpression[callee.name='setTimeout']",
+            message: 'Unexpected setTimeout.'
+          },
+          {
+            selector: "CallExpression[callee.name='setInterval']",
+            message: 'Unexpected setInterval.'
+          },
+          {
+            selector: "CallExpression[callee.name='execScript']",
+            message: 'Unexpected execScript.'
+          }
+        ]
       }
     };
+
     ```
 3. [EditorConfig](https://editorconfig.org/) 统一的代码风格工具
    
