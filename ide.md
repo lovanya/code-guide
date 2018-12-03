@@ -134,7 +134,7 @@ ESlint 和 Prettier 我们都选择在项目中安装，这样不管能避免其
 ## 开发工具
 
 我们选择 [Visual Studio Code](https://code.visualstudio.com/) 作为前端开发的工具。
-`Ctrl + Shift + P` 分别搜索插件  ESLint、Vetur、Prettier - Code formatter、EditorConfig for VS Code 安装，在编辑器首选项配置中修改配置
+`Ctrl + Shift + X` 分别搜索插件  ESLint、Vetur、Prettier - Code formatter、EditorConfig for VS Code 安装，在编辑器首选项配置中修改配置
 
 ```json
 "vetur.format.defaultFormatter.html": "prettier", 
